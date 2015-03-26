@@ -11,14 +11,10 @@
 int		main(int ac, char **av, char **env)
 {
 	pid_t	father;
-		
-	father = fork();
-	if (father > 0)
-	{
-		wait();
-	}
-	if (father == 0)
-	{
-		execve("/bin/ls", av, env);
-	}
+	char	**tab;
+
+	(void)ac;
+	tab = read_cmd();
+	exec_cmd(tab, env);
+	return (0);
 }
