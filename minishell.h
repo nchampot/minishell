@@ -10,8 +10,12 @@
 #define __minishell__minishell__
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
+#include "libft/inc/libft.h"
+#include <sys/wait.h>
 
-char	*read_cmd(void);
+char	**read_cmd(void);
+int		exec_cmd(char **cmd, char **env);
 
 #endif /* defined(__minishell__minishell__) */
