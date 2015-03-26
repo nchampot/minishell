@@ -10,5 +10,8 @@
 #define __minishell__minishell__
 
 #include <stdio.h>
+#include <unistd.h>
+
+char	*read_cmd(void);
 
 #endif /* defined(__minishell__minishell__) */
