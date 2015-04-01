@@ -17,7 +17,10 @@ char	**read_cmd(void)
 	char	*buf;
 	char	**tab;
 
-	get_next_line(0, &buf);
+    ft_putstr(ft_getenv("PWD"));
+    ft_putstr(" $> ");
+	if (get_next_line(0, &buf) == 0)
+        return (NULL);
 	tab = ft_strsplit(buf, ' ');
 	return (tab);
 }
