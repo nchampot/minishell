@@ -1,4 +1,4 @@
-SRC = minishell.c read.c exec.c
+SRC = minishell.c read.c exec.c ft_getenv.c cd.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -15,7 +15,20 @@
 #include "libft/inc/libft.h"
 #include <sys/wait.h>
 
+typedef int (*fptr)(const char **str);
+
+typedef struct  s_bcmd
+{
+    fptr          func;
+    const char    *name;
+}               t_bcmd;
+
 char	**read_cmd(void);
-int		exec_cmd(char **cmd, char **env);
+int		    fork_exec(const char **cmd);
+char        *ft_getenv(const char *var);
+int     b_unsetenv(const char **cmd);
+int     b_env(const char **cmd);
+int     b_setenv(const char **cmd);
+int     b_cd(const char **cmd);
 
 #endif /* defined(__minishell__minishell__) */
